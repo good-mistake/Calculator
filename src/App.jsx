@@ -111,7 +111,7 @@ function App() {
               if (button === "Reset") handleReset();
               else if (button === "DEL") handleDelete();
               else if (button === "=") handleCalculate();
-              else if (["+", "-", "*", "/"].includes(button))
+              else if (["+", "-", "x", "/"].includes(button))
                 handleOperationClick(button);
               else handleButtonClick(String(button));
             }}
