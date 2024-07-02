@@ -22,7 +22,6 @@ function App() {
     1,
     2,
     3,
-
     "-",
     ".",
     0,
@@ -81,9 +80,11 @@ function App() {
       setError("Incomplete expression");
       return;
     }
+    let expression = `${firstValue}${operation}${secondValue}`;
+    expression = expression.replace(/x/g, "*");
 
     try {
-      const result = eval(`${firstValue}${operation}${secondValue}`);
+      const result = eval(expression);
       setInput(String(result));
       setFirstValue(String(result));
       setSecondValue("");
